@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alpha check</title>
+<style>
+  body { margin: 0; font-family: -apple-system, sans-serif; background: #1b7f3a; padding: 24px; }
+  .board { background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%); background-size: 40px 40px; background-position: 0 0, 0 20px, 20px -20px, -20px 0; background-color: #fff; display: flex; gap: 24px; padding: 24px; flex-wrap: wrap; }
+  figure { margin: 0; }
+  video { width: 260px; display: block; }
+  figcaption { color: #111; background: #ffffffcc; padding: 6px 10px; font-size: 14px; }
+  h1 { color: #fff; font-size: 18px; }
+</style>
+</head>
+<body>
+<h1>If the checkerboard shows through around the animation, the file has real alpha. A black box means no alpha.</h1>
+<div class="board">
+  <figure><video src="alpha-probe.webm" autoplay loop muted playsinline></video><figcaption>alpha-probe.webm (VP8 + alpha)</figcaption></figure>
+  <figure><video src="alpha-probe-vp9.webm" autoplay loop muted playsinline></video><figcaption>alpha-probe-vp9.webm (VP9 + alpha)</figcaption></figure>
+  <figure><video src="cursor-clicks-card.mp4" autoplay loop muted playsinline></video><figcaption>cursor-clicks-card.mp4 (no alpha, for contrast)</figcaption></figure>
+</div>
+</body>
+</html>
